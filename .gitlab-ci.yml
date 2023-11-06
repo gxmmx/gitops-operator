@@ -1,0 +1,23 @@
+---
+include:
+  - remote: "https://gitlab.com/gxmmx/gitops/flow/-/raw/main/templates/lint.gitlab-ci.yml"
+  - remote: "https://gitlab.com/gxmmx/gitops/flow/-/raw/main/templates/cbuild.gitlab-ci.yml"
+
+variables:
+  CIFLOW_LINT_BRANCH_DEV: "false"
+  CIFLOW_LINT_BRANCH_TEST: "true"
+  CIFLOW_LINT_BRANCH_MAIN: "true"
+
+  CIFLOW_LINT_DOCKERFILE: "true"
+  CIFLOW_LINT_DOCKERFILE_REPORT: "false"
+  CIFLOW_LINT_DOCKERFILE_PATH: "image/Dockerfile"
+  CIFLOW_LINT_DOCKERFILE_CONFIG: ".hadolint.yml"
+
+  CIFLOW_CBUILD_MULTIARCH: "true"
+  CIFLOW_CBUILD_ARCH: "linux/arm64,linux/arm64/v8,linux/amd64"
+
+  CIFLOW_CBUILD_DOCKERFILE_PATH: "image/Dockerfile"
+  CIFLOW_CBUILD_RELEASE_REGISTRY: "docker.io"
+  CIFLOW_CBUILD_RELEASE_REGISTRY_LINK: "https://hub.docker.com/r"
+  CIFLOW_CBUILD_RELEASE_USER: "gxmmx"
+  CIFLOW_CBUILD_RELEASE_IMAGE: "gitops-operator"
