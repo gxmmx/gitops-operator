@@ -24,7 +24,7 @@ Contains useful tools for deployment and provisioning.
 <!-- About -->
 ## About
 
-Container image mainly for use in CICD pipelines.  
+Container image for use in CICD pipelines.  
 Contains [Terraform](https://www.terraform.io), [Gitlab-Terraform](https://docs.gitlab.com/ee/user/infrastructure/iac/gitlab_terraform_helpers.html), [Ansible](https://www.ansible.com) and [Cloudflare cli4](https://github.com/cloudflare/python-cloudflare)
 
 <!-- Information -->
